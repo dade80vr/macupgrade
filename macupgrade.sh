@@ -38,7 +38,7 @@ echo -e "${IYellow}********* Check Mac App Store upgrades ${IPurple}(insert your
 mas upgrade
 
 #system updates
-echo -e "${IYellow}********* Check Mac OS upgrades ${IPurple}(insert your admin pass if required)${Color_Off}"
+echo -e "${IYellow}********* Check Mac OS upgrades ${IPurple}(insert your super-user pass if required)${Color_Off}"
 sudo softwareupdate -iva
 
 #finish!
