@@ -11,13 +11,12 @@ Require [MAS](https://github.com/mas-cli/mas). Please download and install it.
 
 ### Make it executable
 
-`chmod +x macupgrade/macupgrade.sh`
+`cd macupgrade` 
+`chmod +x macupgrade.sh`
 
 ### Run with
 
 `./macupgrade.sh`
-
-At first run, script will download a usefull _shell-colours_ config file, feel free to use!
 
 #### License
 
