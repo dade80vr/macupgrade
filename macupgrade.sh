@@ -3,7 +3,7 @@
 # Require MAS @ https://github.com/mas-cli/mas
 
 #sourcing bash colours
-source shell-colours.sh
+source bash-colours.sh
 
 #banner
 echo -e "${IBlue}"
