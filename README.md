@@ -1,9 +1,11 @@
 # macupgrade
 Upgrade HomeBrews & Mac OS in one time!
 
-This Bash script performs an owner check of /usr/local folder (to avoid HomeBrew folder ownership errors), run HomeBrew update/upgrade/clean, run MAS & Mac OS upgrades.
-
 By [Davide Permunian](https://github.com/dade80vr) 
+
+## Features
+
+Designed only for Apple Mac, this Bash script performs an owner check/mod of /usr/local folder (to avoid HomeBrew folder ownership errors), run HomeBrew update/upgrade/cleanup, run MAS & Mac OS upgrades.
 
 ### Requirements
 
@@ -28,7 +30,6 @@ chmod +x macupgrade.sh
 ```shell
 ./macupgrade.sh
 ```
----
 
 #### License
 
