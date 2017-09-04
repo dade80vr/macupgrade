@@ -5,7 +5,7 @@ By [Davide Permunian](https://github.com/dade80vr)
 
 ## Features
 
-Designed only for Apple Mac, this Bash script performs an owner check/mod of /usr/local folder (to avoid HomeBrew folder ownership errors), run HomeBrew update/upgrade/cleanup, run MAS & Mac OS upgrades.
+Designed for Apple Mac, this Bash script performs an owner check/mod of _/usr/local_ folder (to avoid HomeBrew folder ownership errors), run HomeBrew update/upgrade/cleanup, run MAS & Mac OS upgrades.
 
 ### Requirements
 
