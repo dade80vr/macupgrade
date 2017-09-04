@@ -2,27 +2,17 @@
 # Auto Mac & HomeBrew upgrade script by Davide Permunian (@dade80vr)
 # Require MAS @ https://github.com/mas-cli/mas
 
+#sourcing bash colours
+source shell-colours.sh
+
 #banner
-echo -e ""
+echo -e "${IBlue}"
 echo -e "*******************************************"
 echo -e "********* Auto Mac Upgrade Script *********"
 echo -e "*********       by dade80vr       *********"
 echo -e "*********  	    v3.1          *********"
 echo -e "*******************************************"
-echo -e ""
-
-#check if "colours" file is present, otherwise download it
-if [ -f "shell-colours.sh" ]
-then
-        echo -e ""
-else
-        #download it
-        echo -e "********* Downloading shell-colours file"
-        wget -q "https://git.io/v5udf" -O "shell-colours.sh"
-fi
-
-#sourcing bash colours
-source shell-colours.sh
+echo -e "${Color_Off}"
 
 #check owner of /usr/local
 own_usr=$(stat "/usr/local" | awk '{print $5}')
