@@ -7,16 +7,22 @@ Require [MAS](https://github.com/mas-cli/mas). Please download and install it.
 
 ### Installation
 
-`git clone https://github.com/dade80vr/macupgrade.git`
+```shell
+git clone https://github.com/dade80vr/macupgrade.git
+```
 
 ### Make it executable
 
-`cd macupgrade` 
-`chmod +x macupgrade.sh`
+```shell
+cd macupgrade 
+chmod +x macupgrade.sh
+```
 
 ### Run with
 
-`./macupgrade.sh`
+```shell
+./macupgrade.sh
+```
 
 #### License
 
