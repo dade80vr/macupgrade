@@ -5,7 +5,8 @@ By [Davide Permunian](https://github.com/dade80vr)
 
 ### Requirements
 
-* [MAS](https://github.com/mas-cli/mas) > Please download and install it.
+* [MAS](https://github.com/mas-cli/mas)
+* [HomeBrew](https://brew.sh/index_it.html)
 
 ### Installation
 
