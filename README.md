@@ -3,7 +3,9 @@ Auto Mac &amp; HomeBrew upgrade script with owner check of /usr/local folder, to
 
 By [Davide Permunian](https://github.com/dade80vr) 
 
-Require [MAS](https://github.com/mas-cli/mas). Please download and install it.
+### Requirements
+
+[MAS](https://github.com/mas-cli/mas) --> Please download and install it.
 
 ### Installation
 
@@ -23,7 +25,16 @@ chmod +x macupgrade.sh
 ```shell
 ./macupgrade.sh
 ```
+---
 
 #### License
 
 Code is under the [MIT license](LICENSE).
+
+---
+
+#### Want to uninstall?
+
+```shell
+rm -rf macupgrade
+```
