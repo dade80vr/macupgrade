@@ -1,11 +1,11 @@
 # macupgrade
-Auto Mac &amp; HomeBrew upgrade script with owner check of /usr/local folder, to avoid HomeBrew errors.
+Auto Mac &amp; HomeBrew upgrade script with owner check of /usr/local folder, to avoid HomeBrew folder ownership errors.
 
 By [Davide Permunian](https://github.com/dade80vr) 
 
 ### Requirements
 
-[MAS](https://github.com/mas-cli/mas) --> Please download and install it.
+* [MAS](https://github.com/mas-cli/mas) > Please download and install it.
 
 ### Installation
 
