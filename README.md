@@ -1,7 +1,9 @@
 # macupgrade
 Upgrade HomeBrews & Mac OS in one time!
 
-By [Davide Permunian](https://github.com/dade80vr) 
+By [Davide Permunian](https://github.com/dade80vr)
+
+*Version3.1*
 
 ## Features
 
@@ -21,7 +23,7 @@ git clone https://github.com/dade80vr/macupgrade.git
 ### Make it executable
 
 ```shell
-cd macupgrade 
+cd macupgrade
 chmod +x macupgrade.sh
 ```
 
