@@ -58,4 +58,4 @@ echo -e "${IYellow}*** Step 8/8 *** Check Mac OS upgrades: ${IPurple}insert your
 sudo softwareupdate -iva > /dev/null
 
 #finish!
-echo -e "${IWhite}********* End!${Color_Off}"
+echo -e "${IGreen}***** End! *****${Color_Off}"
