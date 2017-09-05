@@ -1,5 +1,6 @@
 # macupgrade
 Upgrade HomeBrews & Mac OS in one time!
+*Version 3*
 
 By [Davide Permunian](https://github.com/dade80vr)
 
