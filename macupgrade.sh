@@ -7,12 +7,11 @@ source bash-colours.sh
 
 #banner
 echo -e "${IBlue}"
-echo -e "*******************************************"
-echo -e "********* Auto Mac Upgrade Script *********"
-echo -e "*********       by dade80vr       *********"
-echo -e "*********        version 3        *********"
-echo -e "*******************************************"
-echo -e "${Color_Off}"
+echo -e "******************************************"
+echo -e "******** MacUpgrade  by dade80vr *********"
+echo -e "**** HomeBrew e Mac OS upgrade script ****"
+echo -e "*************** version  3 ***************"
+echo -e "******************************************"
 
 #check owner of /usr/local
 own_usr=$(stat "/usr/local" | awk '{print $5}')
