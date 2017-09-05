@@ -18,8 +18,9 @@ echo -e "${Color_Off}"
 own_usr=$(stat "/usr/local" | awk '{print $5}')
 #if different, set new owner
 if [ "$own_usr" != "$(whoami)" ]; then
-	echo -e "${IRed}********* Set $(whoami) as new owner of /usr/local folder ${IPurple}(insert your super-user pass if required)${Color_Off}"
+	echo -e "${IRed}********* Set $(whoami) as new owner of /usr/local folder: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
 	sudo chown -R $(whoami) /usr/local > /dev/null
+	echo -e "${IGreen}done!${Color_Off}"
 fi
 
 #upgrading HomeBrew and Cask
