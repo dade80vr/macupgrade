@@ -42,9 +42,8 @@ mas upgrade > /dev/null
 echo -e "${IGreen}done!${Color_Off}"
 
 #system updates
-echo -en "${IYellow}********* Check Mac OS upgrades: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
+echo -e "${IYellow}********* Check Mac OS upgrades: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
 sudo softwareupdate -iva > /dev/null
-echo -e "${IGreen}done!${Color_Off}"
 
 #finish!
-echo -e "${IGreen}********* End!${Color_Off}"
+echo -e "${IWhite}********* End!${Color_Off}"
