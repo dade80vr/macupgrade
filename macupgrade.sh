@@ -1,6 +1,6 @@
 #!/bin/bash
-# Auto Mac & HomeBrew upgrade script by Davide Permunian (@dade80vr)
-# Require MAS @ https://github.com/mas-cli/mas
+# Auto Mac & HomeBrew upgrade script by Davide Permunian (https://github.com/dade80vr)
+# Require MAS https://github.com/mas-cli/mas
 
 #sourcing bash colours
 source bash-colours.sh
@@ -18,27 +18,27 @@ own_usr=$(stat "/usr/local" | awk '{print $5}')
 #if different, set new owner
 if [ "$own_usr" != "$(whoami)" ]; then
 	echo -e "${IRed}********* Set $(whoami) as new owner of /usr/local folder ${IPurple}(insert your super-user pass if required)${Color_Off}"
-	sudo chown -R $(whoami) /usr/local
+	sudo chown -R $(whoami) /usr/local > /dev/null
 fi
 
 #upgrading HomeBrew and Cask
 echo -e "${IYellow}********* Run HomeBrew update${Color_Off}"
-brew update
+brew update > /dev/null
 echo -e "${IYellow}********* Run HomeBrew upgrade${Color_Off}"
-brew upgrade
+brew upgrade > /dev/null
 
 #homeBrew cache cleaning
 echo -e "${IYellow}********* Clear HomeBrew cache${Color_Off}"
-brew cleanup --force
-rm -f -r /Library/Caches/Homebrew/*
+brew cleanup --force > /dev/null
+rm -f -r /Library/Caches/Homebrew/* > /dev/null
 
 #upgrading MAS
 echo -e "${IYellow}********* Check Mac App Store upgrades ${IPurple}(insert your Apple ID pass if required)${Color_Off}"
-mas upgrade
+mas upgrade > /dev/null
 
 #system updates
 echo -e "${IYellow}********* Check Mac OS upgrades ${IPurple}(insert your super-user pass if required)${Color_Off}"
-sudo softwareupdate -iva
+sudo softwareupdate -iva > /dev/null
 
 #finish!
 echo -e "${IGreen}********* End!${Color_Off}"
