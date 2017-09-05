@@ -11,9 +11,9 @@ Designed for Apple Mac, this Bash script performs an owner check/mod of _/usr/lo
 
 ### Requirements
 
-* [MAS](https://github.com/mas-cli/mas)
-* [awk](http://brewformulas.org/Awk)
 * [HomeBrew](https://brew.sh/index_it.html)
+* [awk](http://brewformulas.org/Awk)
+* [MAS](https://github.com/mas-cli/mas)
 
 ### Installation
 
