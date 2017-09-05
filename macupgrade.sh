@@ -1,6 +1,11 @@
 #!/bin/bash
-# Auto Mac & HomeBrew upgrade script by Davide Permunian (https://github.com/dade80vr)
-# Require MAS https://github.com/mas-cli/mas
+# macupgrade (https://github.com/dade80vr/macupgrade) - version 3.0
+#
+# Upgrade HomeBrews, Mac OS and other stuff in one time!
+# Created by Davide Permunian (https://github.com/dade80vr)
+# See requirements in README.md
+#
+# Last update: September 5, 2017
 
 #sourcing bash colours
 source bash-colours.sh
@@ -8,9 +13,9 @@ source bash-colours.sh
 #banner
 echo -e "${IBlue}"
 echo -e "******************************************"
-echo -e "******** MacUpgrade  by dade80vr *********"
-echo -e "**** HomeBrew e Mac OS upgrade script ****"
-echo -e "*************** version  3 ***************"
+echo -e "          macupgrade by dade80vr"
+echo -e "  https://github.com/dade80vr/macupgrade"
+echo -e "                version 3"
 echo -e "******************************************"
 echo -e "${Color_Off}"
 
