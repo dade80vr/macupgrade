@@ -17,7 +17,7 @@ echo -e "******************************************"
 own_usr=$(stat "/usr/local" | awk '{print $5}')
 #if different, set new owner
 if [ "$own_usr" != "$(whoami)" ]; then
-	echo -e "${IRed}********* Set $(whoami) as new owner of /usr/local folder${IPurple}(insert your super-user pass if required)${Color_Off}"
+	echo -e "${IRed}********* Set $(whoami) as new owner of /usr/local folder ${IPurple}(insert your super-user pass if required)${Color_Off}"
 	sudo chown -R $(whoami) /usr/local
 fi
 
@@ -37,7 +37,7 @@ echo -e "${IYellow}********* Check Mac App Store upgrades ${IPurple}(insert your
 mas upgrade
 
 #system updates
-echo -e "${IYellow}********* Check Mac OS upgrades${IPurple}(insert your super-user pass if required)${Color_Off}"
+echo -e "${IYellow}********* Check Mac OS upgrades ${IPurple}(insert your super-user pass if required)${Color_Off}"
 sudo softwareupdate -iva
 
 #finish!
