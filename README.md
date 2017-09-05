@@ -1,5 +1,5 @@
 # macupgrade
-Upgrade HomeBrews & Mac OS in one time!
+Upgrade HomeBrews, Mac OS and other stuff in one time!
 
 *Version 3*
 
@@ -7,12 +7,14 @@ By [Davide Permunian](https://github.com/dade80vr)
 
 ## Features
 
-Designed for Apple Mac, this Bash script performs an owner check/mod of _/usr/local_ folder (to permit to any users to run HomeBrew update/upgrade without folder ownership errors), run HomeBrew update/upgrade/cleanup, run MAS & Mac OS upgrades.
+Designed for Apple Mac, this Bash script performs an owner check/mod of _/usr/local_ folder (to permit to any users to run HomeBrew update/upgrade without folder ownership errors), run HomeBrew + Cask update/upgrade/cleanup, run Atom upgrade, NPM update and finally run MAS & Mac OS upgrades.
 
 ### Requirements
 
 * [HomeBrew](https://brew.sh/index_it.html)
 * [awk](http://brewformulas.org/Awk)
+* [Atom](https://atom.io)
+* [npm](https://www.npmjs.com)
 * [MAS](https://github.com/mas-cli/mas)
 
 ### Installation
