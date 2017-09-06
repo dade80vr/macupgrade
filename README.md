@@ -37,8 +37,13 @@ chmod +x macupgrade.sh
 ```shell
 ./macupgrade.sh
 ```
+### Inline help
 
-#### License
+--help: show help
+-v : verbose mode for any internal script (quiet default)
+*-m : monochrome (still working)*
+
+### License
 
 Code is under the [MIT license](LICENSE).
 
