@@ -1,8 +1,6 @@
 # macupgrade ![release version](https://img.shields.io/github/release/dade80vr/macupgrade.svg)
 Upgrade HomeBrews, Mac OS and other stuff in one time!
 
-By [Davide Permunian](https://github.com/dade80vr)
-
 ![Image of macupgrade at work](macupgrade.png)
 
 ## Features

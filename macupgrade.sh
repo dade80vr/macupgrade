@@ -1,5 +1,5 @@
 #!/bin/bash
-# macupgrade (https://github.com/dade80vr/macupgrade) - version 3.0
+# macupgrade (https://github.com/dade80vr/macupgrade) - v3.0
 #
 # Upgrade HomeBrews, Mac OS and other stuff in one time!
 # Created by Davide Permunian (https://github.com/dade80vr)
