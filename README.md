@@ -32,21 +32,15 @@ cd macupgrade
 chmod +x macupgrade.sh
 ```
 
-### Run with
+### Usage
 
-```shell
-./macupgrade.sh
-```
-### Inline help
+`./macupgrade.sh` (with no arguments) run in quiet mode (default)
 
-`--help`
-    show help
+`--help` show help
 
-`-v`
-    verbose mode for any internal script (quiet default)
+`-v` verbose mode, show output from any script (default hide)
 
-*`-m`
-    monochrome (still working)*
+*`-m` monochrome (still working)*
 
 ### License
 
@@ -54,7 +48,7 @@ Code is under the [MIT license](LICENSE).
 
 ---
 
-#### Want to uninstall?
+### Want to uninstall?
 
 ```shell
 rm -rf macupgrade
