@@ -52,7 +52,7 @@ fi
 own_usr=$(stat "/usr/local" | awk '{print $5}')
 #if different, set new owner
 if [ "$own_usr" != "$(whoami)" ]; then
-	echo -e "${IRed}*** Step 0/7 *** Set $(whoami) as new owner of /usr/local folder: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
+	echo -e "${IRed}*** Step 0/7 *** Set $(whoami) as new owner of /usr/local folder (was $own_usr): ${IPurple}insert your super-user pass if required.. ${Color_Off}"
 	sudo chown -R $(whoami) /usr/local > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
