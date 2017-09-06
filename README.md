@@ -40,7 +40,9 @@ chmod +x macupgrade.sh
 ### Inline help
 
 --help: show help
+
 -v : verbose mode for any internal script (quiet default)
+
 *-m : monochrome (still working)*
 
 ### License
