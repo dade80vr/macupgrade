@@ -24,7 +24,7 @@ echo -e "${Color_Off}"
 case $1 in
 	"")
 		runmode="/dev/null"
-		echo -e "- Running in quite mode (default) -"
+		echo -e "- Running in quiet mode (default) -"
 		echo -e ""
 		;;
 	-v)
