@@ -1,7 +1,7 @@
 # macupgrade
 Upgrade HomeBrews, Mac OS and other stuff in one time!
 
-*Version 3*
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
 
 By [Davide Permunian](https://github.com/dade80vr)
 
