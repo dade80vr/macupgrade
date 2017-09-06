@@ -5,9 +5,7 @@ Upgrade HomeBrews, Mac OS and other stuff in one time!
 
 By [Davide Permunian](https://github.com/dade80vr)
 
-<img align="center" src="https://github.com/dade80vr/macupgrade/blob/master/macupgrade-at-work.png" alt="macupgrade @ work">
-
-![macupgrade @ work!](https://github.com/dade80vr/macupgrade/blob/master/macupgrade-at-work.png)
+![Image of macupgrade @ work](https://github.com/dade80vr/macupgrade/blob/master/macupgrade-at-work.png)
 
 ## Features
 
