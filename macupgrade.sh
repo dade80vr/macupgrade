@@ -41,7 +41,7 @@ case $1 in
 		echo -e "Showing help"
 		echo -e ""
 		echo -e "-v : verbose mode, show output from any script (default hide)"
-		echo -e "-m : monochrome mode, sstill working, please wait"
+		echo -e "-m : monochrome mode, still working, please wait"
 		echo -e ""
 		echo -e "--help : show this help"
 		echo -e ""
