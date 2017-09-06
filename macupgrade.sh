@@ -21,32 +21,38 @@ echo -e "********************************************************"
 echo -e "${Color_Off}"
 
 
-#check run mode
-if [ -z "$1" ]
-then
+case $1 in
+	"")
 		runmode="/dev/null"
 		echo -e "- Running in quite mode (default) -"
 		echo -e ""
-elif [ $1 == "-v" ]
-then
+		;;
+	-v)
 		runmode="/dev/tty"
 		echo -e "- Running in verbose mode (-v) -"
 		echo -e ""
-#show help
-elif [ $1 == "--help" ]
-then
+		;;
+	-m)
+		echo -e "monochrome mode, still working, please wait"
+		echo -e ""
+		exit 1
+		;;
+	--help)
 		echo -e "Showing help"
 		echo -e ""
 		echo -e "-v : verbose mode, show output from any script (default hide)"
+		echo -e "-m : monochrome mode, sstill working, please wait"
 		echo -e ""
 		echo -e "--help : show this help"
 		echo -e ""
 		exit 1
-else
-    echo -e "This action does not exist! Use ./macupgrade.sh --help to show help."
+		;;
+	*)
+		echo -e "This action does not exist! Use ./macupgrade.sh --help to show help."
 		echo ""
 		exit 1
-fi
+		;;
+esac
 
 #modify owner of /usr/local ***** could there be a better solution? *****
 own_usr=$(stat "/usr/local" | awk '{print $5}')
