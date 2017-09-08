@@ -7,20 +7,26 @@
 #
 # Last update in September, 2017
 
-#sourcing bash colours
-source bash-colours.sh
+# High Intensity colours
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+# Reset
+Color_Off='\033[0m'       # Text Reset
 
-#banner
-echo -e "${IBlue}"
+#start banner
+echo -e "$IBlue"
 echo -e "********************************************************"
 echo -e "                   macupgrade v3.0"
 echo -e " Upgrade HomeBrews, Mac OS and other stuff in one time!"
 echo -e "      https://github.com/dade80vr/macupgrade"
 echo -e "                  --help for manual"
 echo -e "********************************************************"
-echo -e "${Color_Off}"
+echo -e "$Color_Off"
 
-
+#arguments check
 case $1 in
 	"")
 		runmode="/dev/null"
@@ -33,15 +39,20 @@ case $1 in
 		echo -e ""
 		;;
 	-m)
-		echo -e "monochrome mode, still working, please wait"
+		runmode="/dev/null"
+		IRed=$Color_Off
+		IGreen=$Color_Off
+		IYellow=$Color_Off
+		IBlue=$Color_Off
+		IPurple=$Color_Off
+		echo -e "- Running in monochrome & quiet mode -"
 		echo -e ""
-		exit 1
 		;;
 	--help)
 		echo -e "Showing help"
 		echo -e ""
 		echo -e "-v : verbose mode, show output from any script (default hide)"
-		echo -e "-m : monochrome mode, still working, please wait"
+		echo -e "-m : monochrome mode"
 		echo -e ""
 		echo -e "--help : show this help"
 		echo -e ""
