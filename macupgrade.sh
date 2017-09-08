@@ -1,5 +1,5 @@
 #!/bin/bash
-# macupgrade (https://github.com/dade80vr/macupgrade) - v3.0
+# macupgrade (https://github.com/dade80vr/macupgrade) - v3.1
 #
 # Upgrade HomeBrews, Mac OS and other stuff in one time!
 # Created by Davide Permunian (https://github.com/dade80vr)
@@ -19,7 +19,7 @@ Color_Off='\033[0m'       # Text Reset
 #start banner
 echo -e "$IBlue"
 echo -e "********************************************************"
-echo -e "                   macupgrade v3.0"
+echo -e "                   macupgrade v3.1"
 echo -e " Upgrade HomeBrews, Mac OS and other stuff in one time!"
 echo -e "      https://github.com/dade80vr/macupgrade"
 echo -e "                  --help for manual"
