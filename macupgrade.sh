@@ -70,7 +70,7 @@ if ! [ -x "$(command -v awk)" ]
 then
 	echo -e "${IRed}*** ERROR *** AWK not installed! Please install it ( http://brewformulas.org/Awk )${Color_Off}"
   exit 1
-if
+fi
 
 #modify owner of /usr/local ***** could there be a better solution? *****
 own_usr=$(stat "/usr/local" | awk '{print $5}')
