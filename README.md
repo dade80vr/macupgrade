@@ -9,7 +9,7 @@ Designed for Apple Mac, this Bash script performs an owner check/mod of _/usr/lo
 
 ### MAIN requirements
 
-* [awk](http://brewformulas.org/Awk)
+* [awk](https://developer.apple.com/library/content/documentation/OpenSource/Conceptual/ShellScripting/Howawk-ward/Howawk-ward.html)
 
 ### SUB requirements (not needed but useful)
 
