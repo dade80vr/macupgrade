@@ -65,6 +65,13 @@ case $1 in
 		;;
 esac
 
+#check if AWK exist
+if ! [ -x "$(command -v awk)" ]
+then
+	echo -e "${IRed}*** ERROR *** AWK not installed! Please install it ( http://brewformulas.org/Awk )${Color_Off}"
+  exit 1
+if
+
 #modify owner of /usr/local ***** could there be a better solution? *****
 own_usr=$(stat "/usr/local" | awk '{print $5}')
 #if different, set new owner
@@ -74,11 +81,11 @@ if [ "$own_usr" != "$(whoami)" ]; then
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
 
+#upgrading HomeBrew and Cask
 if ! [ -x "$(command -v brew)" ]
 then
-  echo -e "${IRed}*** SKIP Steps 1-2-3 *** BREW not installed${Color_Off}"
+  echo -e "${IRed}*** SKIP Steps 1-2-3 *** BREW not installed ( https://brew.sh/index_it.html )${Color_Off}"
 else
-	#upgrading HomeBrew and Cask
 	echo -en "${IYellow}*** Step 1/7 *** Run HomeBrew update.. ${Color_Off}"
 	brew update > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
@@ -93,41 +100,41 @@ else
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
 
+#Atom upgrade without confirm
 if ! [ -x "$(command -v apm)" ]
 then
-  echo -e "${IRed}*** SKIP Step 4 *** APM not installed${Color_Off}"
+  echo -e "${IRed}*** SKIP Step 4 *** APM/ATOM not installed ( https://atom.io/ )${Color_Off}"
 else
-	#Atom upgrade without confirm
 	echo -en "${IYellow}*** Step 4/7 *** Run Atom upgrade.. ${Color_Off}"
 	apm upgrade -c false > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
 
+#NPM upgrade
 if ! [ -x "$(command -v npm)" ]
 then
-  echo -e "${IRed}*** SKIP Step 5 *** NPM not installed${Color_Off}"
+  echo -e "${IRed}*** SKIP Step 5 *** NPM not installed ( https://www.npmjs.com/ )${Color_Off}"
 else
-	#NPM upgrade
 	echo -en "${IYellow}*** Step 5/7 *** Run NPM update.. ${Color_Off}"
 	npm update -g > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
 
+#upgrading MAS
 if ! [ -x "$(command -v mas)" ]
 then
-  echo -e "${IRed}*** SKIP Step 6 *** MAS not installed${Color_Off}"
+  echo -e "${IRed}*** SKIP Step 6 *** MAS not installed ( https://github.com/mas-cli/mas )${Color_Off}"
 else
-	#upgrading MAS
 	echo -en "${IYellow}*** Step 6/7 *** Check Mac App Store upgrades: ${IPurple}insert your Apple ID pass if required.. ${Color_Off}"
 	mas upgrade > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
 
+#system updates
 if ! [ -x "$(command -v softwareupdate)" ]
 then
-  echo -e "${IRed}*** SKIP Step 7 *** SOFTWAREUPDATE not installed${Color_Off}"
+  echo -e "${IRed}*** SKIP Step 7 *** SOFTWAREUPDATE not installed ( strange, it should be installed by default.. )${Color_Off}"
 else
-	#system updates
 	echo -e "${IYellow}*** Step 7/7 *** Check Mac OS upgrades: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
 	sudo softwareupdate -iva > $runmode
 fi
