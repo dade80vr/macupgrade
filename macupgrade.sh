@@ -68,15 +68,15 @@ esac
 #check if AWK exist
 if ! [ -x "$(command -v awk)" ]
 then
-	echo -e "${IRed}*** ERROR *** AWK not installed! Please install it ( http://brewformulas.org/Awk )${Color_Off}"
+	echo -e "${IRed}**** ERROR **** AWK not installed! Please install it ( http://brewformulas.org/Awk )${Color_Off}"
   exit 1
 fi
 
-#modify owner of /usr/local ***** could there be a better solution? *****
+#modify owner of /usr/local ****** could there be a better solution? *****
 own_usr=$(stat "/usr/local" | awk '{print $5}')
 #if different, set new owner
 if [ "$own_usr" != "$(whoami)" ]; then
-	echo -e "${IRed}*** Step 0/7 *** Set $(whoami) as new owner of /usr/local folder (was $own_usr): ${IPurple}insert your super-user pass if required.. ${Color_Off}"
+	echo -e "${IRed}**** Step 0/7 **** Set $(whoami) as new owner of /usr/local folder (was $own_usr): ${IPurple}insert your super-user pass if required.. ${Color_Off}"
 	sudo chown -R $(whoami) /usr/local > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
@@ -84,16 +84,18 @@ fi
 #upgrading HomeBrew and Cask
 if ! [ -x "$(command -v brew)" ]
 then
-  echo -e "${IRed}*** SKIP Steps 1-2-3 *** BREW not installed ( https://brew.sh/index_it.html )${Color_Off}"
+  echo -e "${IRed}SKIP Step 1/7 **** BREW not installed ( https://brew.sh/index_it.html )${Color_Off}"
+	echo -e "${IRed}SKIP Step 2/7 **** BREW not installed ( https://brew.sh/index_it.html )${Color_Off}"
+	echo -e "${IRed}SKIP Step 3/7 **** BREW not installed ( https://brew.sh/index_it.html )${Color_Off}"
 else
-	echo -en "${IYellow}*** Step 1/7 *** Run HomeBrew update.. ${Color_Off}"
+	echo -en "${IYellow}**** Step 1/7 **** Run HomeBrew update.. ${Color_Off}"
 	brew update > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
-	echo -en "${IYellow}*** Step 2/7 *** Run HomeBrew upgrade.. ${Color_Off}"
+	echo -en "${IYellow}**** Step 2/7 **** Run HomeBrew upgrade.. ${Color_Off}"
 	brew upgrade > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 	#homeBrew + Cask cache cleaning
-	echo -en "${IYellow}*** Step 3/7 *** Clear HomeBrew cache.. ${Color_Off}"
+	echo -en "${IYellow}**** Step 3/7 **** Clear HomeBrew cache.. ${Color_Off}"
 	brew cleanup --force > $runmode
 	brew cask cleanup > $runmode
 	rm -f -r /Library/Caches/Homebrew/* > $runmode
@@ -103,9 +105,9 @@ fi
 #Atom upgrade without confirm
 if ! [ -x "$(command -v apm)" ]
 then
-  echo -e "${IRed}*** SKIP Step 4 *** APM/ATOM not installed ( https://atom.io/ )${Color_Off}"
+  echo -e "${IRed}SKIP Step 4/7 **** APM/ATOM not installed ( https://atom.io/ )${Color_Off}"
 else
-	echo -en "${IYellow}*** Step 4/7 *** Run Atom upgrade.. ${Color_Off}"
+	echo -en "${IYellow}**** Step 4/7 **** Run Atom upgrade.. ${Color_Off}"
 	apm upgrade -c false > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
@@ -113,9 +115,9 @@ fi
 #NPM upgrade
 if ! [ -x "$(command -v npm)" ]
 then
-  echo -e "${IRed}*** SKIP Step 5 *** NPM not installed ( https://www.npmjs.com/ )${Color_Off}"
+  echo -e "${IRed}SKIP Step 5/7 **** NPM not installed ( https://www.npmjs.com/ )${Color_Off}"
 else
-	echo -en "${IYellow}*** Step 5/7 *** Run NPM update.. ${Color_Off}"
+	echo -en "${IYellow}**** Step 5/7 **** Run NPM update.. ${Color_Off}"
 	npm update -g > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
@@ -123,9 +125,9 @@ fi
 #upgrading MAS
 if ! [ -x "$(command -v mas)" ]
 then
-  echo -e "${IRed}*** SKIP Step 6 *** MAS not installed ( https://github.com/mas-cli/mas )${Color_Off}"
+  echo -e "${IRed}SKIP Step 6/7 **** MAS not installed ( https://github.com/mas-cli/mas )${Color_Off}"
 else
-	echo -en "${IYellow}*** Step 6/7 *** Check Mac App Store upgrades: ${IPurple}insert your Apple ID pass if required.. ${Color_Off}"
+	echo -en "${IYellow}**** Step 6/7 **** Check Mac App Store upgrades: ${IPurple}insert your Apple ID pass if required.. ${Color_Off}"
 	mas upgrade > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
@@ -133,11 +135,11 @@ fi
 #system updates
 if ! [ -x "$(command -v softwareupdate)" ]
 then
-  echo -e "${IRed}*** SKIP Step 7 *** SOFTWAREUPDATE not installed ( strange, it should be installed by default.. )${Color_Off}"
+  echo -e "${IRed}SKIP Step 7/7 **** SOFTWAREUPDATE not installed ( strange, it should be installed by default.. )${Color_Off}"
 else
-	echo -e "${IYellow}*** Step 7/7 *** Check Mac OS upgrades: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
+	echo -e "${IYellow}**** Step 7/7 **** Check Mac OS upgrades: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
 	sudo softwareupdate -iva > $runmode
 fi
 
 #finish!
-echo -e "${IGreen}***** End! *****${Color_Off}"
+echo -e "${IGreen}****** End! ******${Color_Off}"
