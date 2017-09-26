@@ -39,7 +39,7 @@ chmod +x macupgrade.sh
 
 `-v` verbose mode, show output from any script (default hide)
 
-*`-m` monochrome (still working)*
+`-m` monochrome output
 
 ### License
 
