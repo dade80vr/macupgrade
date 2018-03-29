@@ -9,11 +9,12 @@ Designed for Apple Mac, this Bash script performs an owner check/mod of _/usr/lo
 
 ### MAIN requirements
 
-* [awk](https://developer.apple.com/library/content/documentation/OpenSource/Conceptual/ShellScripting/Howawk-ward/Howawk-ward.html)
+* [Git](https://git-scm.com/download/mac)
+* [awk](http://macappstore.org/gawk)
 
 ### SUB requirements (not needed but useful)
 
-* [HomeBrew](https://brew.sh/index_it.html)
+* [HomeBrew](https://brew.sh)
 * [Atom](https://atom.io)
 * [npm](https://www.npmjs.com)
 * [MAS](https://github.com/mas-cli/mas)
@@ -41,7 +42,7 @@ chmod +x macupgrade.sh
 
 `-m` monochrome output
 
-### `March 2018 update:` Warnings or errors messages regarding MAS 
+### `March 2018 update:` Warnings or errors messages regarding MAS
 
 If you got warnings or errors @ steps 2-3 (HomeBrew MAS upgrade) regarding installation of Xcode 9.0 please see this:
 https://github.com/mas-cli/mas/issues/138
