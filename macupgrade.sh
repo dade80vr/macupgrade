@@ -118,8 +118,10 @@ then
   echo -e "${IRed}SKIP Step 5/7 **** NPM not installed ( https://www.npmjs.com/ )${Color_Off}"
 else
 	echo -en "${IYellow}**** Step 5/7 **** Run NPM update.. ${Color_Off}"
-	npm i -g npm > $runmode
-	npm update -g > $runmode
+	npm set progress=false
+	npm i -gq npm > $runmode
+	npm update -gq > $runmode
+	npm set progress=true
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
 
