@@ -41,6 +41,11 @@ chmod +x macupgrade.sh
 
 `-m` monochrome output
 
+### `March 2018 update:` Warnings or errors messages regarding MAS 
+
+If you got warnings or errors @ steps 2-3 (HomeBrew MAS upgrade) regarding installation of Xcode 9.0 please see this:
+https://github.com/mas-cli/mas/issues/138
+
 ### License
 
 Code is under the [MIT license](LICENSE).
