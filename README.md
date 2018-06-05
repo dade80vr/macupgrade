@@ -44,7 +44,14 @@ chmod +x macupgrade.sh
 
 ### `March 2018 update:` Warnings or errors messages regarding MAS
 
-If you got warnings or errors @ steps 2-3 (HomeBrew MAS upgrade) regarding installation of Xcode 9.0 please see this:
+If you got warnings or errors @ steps 2-3 (HomeBrew MAS upgrade) regarding installation of Xcode 9.0 please remove `mas` and reinstall it from `mas-cli/tap/mas`:
+
+```shell
+brew uninstall mas
+brew install mas-cli/tap/mas
+```
+
+Se this issue for major details:
 https://github.com/mas-cli/mas/issues/138
 
 ### License
