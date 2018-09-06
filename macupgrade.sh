@@ -96,8 +96,7 @@ else
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 	#homeBrew + Cask cache cleaning
 	echo -en "${IYellow}**** Step 3/7 **** Clear HomeBrew cache.. ${Color_Off}"
-	brew cleanup --force > $runmode
-	brew cask cleanup > $runmode
+	brew cleanup > $runmode
 	rm -f -r /Library/Caches/Homebrew/* > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
