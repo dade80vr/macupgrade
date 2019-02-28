@@ -3,13 +3,7 @@
   "version": "3.2.1",
   "description": "Upgrade HomeBrews, Mac OS and other stuff in one time!",
   "main": "macupgrade.sh",
-  "dependencies": {
-    "awk": "http://macappstore.org/gawk/",
-    "homebrew": "https://brew.sh/",
-    "atom": "https://github.com/atom/atom",
-    "npm": "https://www.npmjs.com/",
-    "mas": "https://github.com/mas-cli/mas"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dade80vr/macupgrade.git"
