@@ -1,11 +1,11 @@
 #!/bin/bash
-# macupgrade (https://github.com/dade80vr/macupgrade) - v3.2.1
+# macupgrade (https://github.com/dade80vr/macupgrade) - v3.3
 #
 # Upgrade HomeBrews, Mac OS and other stuff in one time!
 # Created by Davide Permunian (https://github.com/dade80vr)
 # See requirements in README.md
 #
-# Last update in April, 2018
+# Last update in February, 2019
 
 # High Intensity colours
 IRed='\033[0;91m'         # Red
@@ -19,7 +19,7 @@ Color_Off='\033[0m'       # Text Reset
 #start banner
 echo -e "$IBlue"
 echo -e "********************************************************"
-echo -e "                   macupgrade v3.2"
+echo -e "                   macupgrade v3.3"
 echo -e " Upgrade HomeBrews, Mac OS and other stuff in one time!"
 echo -e "      https://github.com/dade80vr/macupgrade"
 echo -e "                  --help for manual"
@@ -93,6 +93,7 @@ else
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 	echo -en "${IYellow}**** Step 2/7 **** Run HomeBrew upgrade.. ${Color_Off}"
 	brew upgrade > $runmode
+	brew cask upgrade > $runmode
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 	#homeBrew + Cask cache cleaning
 	echo -en "${IYellow}**** Step 3/7 **** Clear HomeBrew cache.. ${Color_Off}"
