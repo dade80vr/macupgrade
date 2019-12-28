@@ -1,11 +1,11 @@
 #!/bin/bash
-# macupgrade (https://github.com/dade80vr/macupgrade) - v3.3
+# macupgrade (https://github.com/dade80vr/macupgrade) - v3.4
 #
 # Upgrade HomeBrews, Mac OS and other stuff in one time!
 # Created by Davide Permunian (https://github.com/dade80vr)
 # See requirements in README.md
 #
-# Last update in February, 2019
+# Last update in December, 2019
 
 # High Intensity colours
 IRed='\033[0;91m'         # Red
