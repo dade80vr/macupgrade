@@ -72,14 +72,18 @@ then
   exit 1
 fi
 
-#modify owner of /usr/local ****** could there be a better solution? *****
-own_usr=$(stat "/usr/local" | awk '{print $5}')
-#if different, set new owner
-if [ "$own_usr" != "$(whoami)" ]; then
-	echo -e "${IRed}**** Step 0/7 **** Set $(whoami) as new owner of /usr/local folder (was $own_usr): ${IPurple}insert your super-user pass if required.. ${Color_Off}"
-	sudo chown -R $(whoami) /usr/local > $runmode
-	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
-fi
+# modify owner of /usr/local ****** could there be a better solution? *****
+#
+# removed temporeary, not needed if owner is root and user is only one
+#
+#	own_usr=$(stat "/usr/local" | awk '{print $5}')
+#	#if different, set new owner
+#	if [ "$own_usr" != "$(whoami)" ]; then
+#		echo -e "${IRed}**** Step 0/7 **** Set $(whoami) as new owner of /usr/local folder (was $own_usr): ${IPurple}insert your super-user pass if required.. ${Color_Off}"
+#		sudo chown -R $(whoami) /usr/local > $runmode
+#		if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
+#	fi
+#
 
 #upgrading HomeBrew and Cask
 if ! [ -x "$(command -v brew)" ]
@@ -141,7 +145,7 @@ then
   echo -e "${IRed}SKIP Step 7/7 **** SOFTWAREUPDATE not installed ( strange, it should be installed by default.. )${Color_Off}"
 else
 	echo -e "${IYellow}**** Step 7/7 **** Check Mac OS upgrades: ${IPurple}insert your super-user pass if required.. ${Color_Off}"
-	sudo softwareupdate -iva > $runmode
+	sudo softwareupdate -ia > $runmode
 fi
 
 #finish!
