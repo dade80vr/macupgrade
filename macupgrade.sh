@@ -19,7 +19,7 @@ Color_Off='\033[0m'       # Text Reset
 #start banner
 echo -e "$IBlue"
 echo -e "********************************************************"
-echo -e "                   macupgrade v3.3"
+echo -e "                   macupgrade v3.4"
 echo -e " Upgrade HomeBrews, Mac OS and other stuff in one time!"
 echo -e "      https://github.com/dade80vr/macupgrade"
 echo -e "                  --help for manual"
