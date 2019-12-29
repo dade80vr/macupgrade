@@ -123,7 +123,11 @@ then
 else
 	echo -en "${IYellow}**** Step 5/7 **** Run NPM update.. ${Color_Off}"
 	npm set progress=false
-	npm i -gq npm > $runmode
+	#
+	# Removed NPM upgrade because is upgrade by brew itself
+	#
+	#npm i -gq npm > $runmode
+	#
 	npm update -gq > $runmode
 	npm set progress=true
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
