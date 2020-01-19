@@ -42,6 +42,24 @@ chmod +x macupgrade.sh
 
 `-m` monochrome output
 
+### `January 2020 update:` NPM update error needs investigation
+
+Version 3.4 hit an error when running `npm update -gq` so the update was been temporaly disabled for investigation.
+
+```
+npm ERR! code EEXIST
+npm ERR! syscall symlink
+npm ERR! path ../../../lib/node_modules/npm/man/man1/npm-adduser.1
+npm ERR! dest /usr/local/share/man/man1/npm-adduser.1
+npm ERR! errno -17
+npm ERR! EEXIST: file already exists, symlink '../../../lib/node_modules/npm/man/man1/npm-adduser.1' -> '/usr/local/share/man/man1/npm-adduser.1'
+npm ERR! File exists: /usr/local/share/man/man1/npm-adduser.1
+npm ERR! Remove the existing file and try again, or run npm
+npm ERR! with --force to overwrite files recklessly.
+```
+
+Plese wait for next update or help me to find the problem :)
+
 ### `March 2018 update:` Warnings or errors messages regarding MAS
 
 If you got warnings or errors @ steps 2-3 (HomeBrew MAS upgrade) regarding installation of Xcode 9.0 please remove `mas` and reinstall it from `mas-cli/tap/mas`:

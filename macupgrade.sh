@@ -1,11 +1,11 @@
 #!/bin/bash
-# macupgrade (https://github.com/dade80vr/macupgrade) - v3.4
+# macupgrade (https://github.com/dade80vr/macupgrade) - v3.4.1-temp
 #
 # Upgrade HomeBrews, Mac OS and other stuff in one time!
 # Created by Davide Permunian (https://github.com/dade80vr)
 # See requirements in README.md
 #
-# Last update in December, 2019
+# Last update in January, 2020
 
 # High Intensity colours
 IRed='\033[0;91m'         # Red
@@ -19,7 +19,7 @@ Color_Off='\033[0m'       # Text Reset
 #start banner
 echo -e "$IBlue"
 echo -e "********************************************************"
-echo -e "                   macupgrade v3.4"
+echo -e "                   macupgrade v3.4.1-temp"
 echo -e " Upgrade HomeBrews, Mac OS and other stuff in one time!"
 echo -e "      https://github.com/dade80vr/macupgrade"
 echo -e "                  --help for manual"
@@ -124,11 +124,12 @@ else
 	echo -en "${IYellow}**** Step 5/7 **** Run NPM update.. ${Color_Off}"
 	npm set progress=false
 	#
-	# Removed NPM upgrade because is upgrade by brew itself
+	# Temporaly removed NPM upgrade because hit an error and disable npm! :(
+	# Need to be FIXED!
 	#
-	#npm i -gq npm > $runmode
+	# npm update -gq > $runmode
 	#
-	npm update -gq > $runmode
+	echo -e "${IRed}skipped due to an upgrade error (see readme!)${Color_Off}";
 	npm set progress=true
 	if [ $runmode == "/dev/null" ]; then echo -e "${IGreen}done!${Color_Off}"; else echo -e ""; fi
 fi
