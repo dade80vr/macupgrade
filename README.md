@@ -42,6 +42,8 @@ chmod +x macupgrade.sh
 
 `-m` monochrome output
 
+### `April 2020 update:` NPM error fixed 
+
 ### `January 2020 update:` NPM update error needs investigation
 
 Version 3.4 hit an error when running `npm update -gq` so the update was been temporaly disabled for investigation.

@@ -1,6 +1,6 @@
 {
   "name": "macupgrade",
-  "version": "3.2.1",
+  "version": "3.5",
   "description": "Upgrade HomeBrews, Mac OS and other stuff in one time!",
   "main": "macupgrade.sh",
   "dependencies": {},
