@@ -42,7 +42,9 @@ chmod +x macupgrade.sh
 
 `-m` monochrome output
 
-### `April 2020 update:` NPM error fixed 
+### `November 2020 update:` Fixed deprecated commands and fix version:latest upgrades 
+
+### `April 2020 update:` NPM error fixed
 
 ### `January 2020 update:` NPM update error needs investigation
 
