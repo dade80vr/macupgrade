@@ -3,7 +3,6 @@
   "version": "3.5",
   "description": "Upgrade HomeBrews, Mac OS and other stuff in one time!",
   "main": "macupgrade.sh",
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dade80vr/macupgrade.git"
